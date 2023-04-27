@@ -80,6 +80,41 @@ header {
     cursor: pointer;
 }
 
+/* Estilos para pantallas de dispositivos móviles HEADER */
+@media screen and (max-width: 768px) {
+
+    /* Ajustar el tamaño del logo */
+    .header-left img {
+    height: 40px;
+    }
+
+    /* Ajustar la altura del HEADER */
+    header {
+    height: 60px;
+    }
+
+    /* Alinear los íconos a la derecha */
+    .header-icons {
+    margin-left: auto;
+    }
+
+    /* Ajustar el margen derecho del input del buscador */
+    .header-search input[type="text"] {
+    margin-right: 0;
+    }
+
+    /* Ajustar el tamaño de la fuente del input del buscador */
+    .header-search input[type="text"] {
+    font-size: 14px;
+    }
+
+    /* Ajustar el tamaño de los íconos */
+    .header-icons a {
+    font-size: 16px;
+    }
+
+}
+
 /*aquí está la configuración del <footer>*/
 .site-footer {
     background-color: #333;
@@ -640,7 +675,7 @@ p {
 .site-description .buy-now-button:hover {
     background-color: #d91d00;
 }
-/* Estilos para el contenedor del logo */
+/* Estilos para el contenedor del logo site-description*/
 .logo-container {
     display: flex;
     align-items: center;
@@ -648,10 +683,49 @@ p {
     margin-top: 40px;
 }
 
-  /* Estilos para el logo */
+/* Estilos para el logo site-description*/
 .logo-container img {
     height: 40px;
     margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+/* Estilos para site-description en pantallas más pequeñas */
+    .site-description {
+    padding: 80px 20px;
+    }
+
+    .site-description h1 {
+    font-size: 32px;
+    }
+
+    .site-description h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+
+    .site-description p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+    .logo-container {
+    margin-top: 20px;
+    }
+
+    .logo-container img {
+    height: 30px;
+    margin-right: 5px;
+    }
+}
+/*estilos para los banners*/
+@media (max-width: 767px) {
+    .carousel-item img {
+    height: 80vh;
+    object-fit: cover;
+    }
 }
 
 /*Estilos para site-categories*/
