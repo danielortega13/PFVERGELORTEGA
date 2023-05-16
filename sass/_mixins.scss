@@ -1,0 +1,11 @@
+
+@mixin titulos {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+@mixin parrafos {
+    line-height: 1.5;
+    margin-bottom: 1em;
+}

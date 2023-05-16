@@ -1,0 +1,31 @@
+// Variables de colores
+
+$color-background: #F8F8F8;
+$color-gris-claro: #282828;
+$color-negro-espeluznante: #181818;
+$color-negro-noche: #101010;
+$color-negro-arnes: #000000;
+$color-rojo-arnes: #e12e31;
+$color-gris-acorazado: #909090;
+$color-paltino: #DEDEDE;
+$color-fondo: #ffffff;
+$color-titulo: #1a1a1a;
+$color-subtitulo: #a3a3a3;
+$color-enlace: #4a4a4a;
+$color-enlace-hover: #e12e31;
+$color-border: #dddddd;
+$fuente-titulo: 'Montserrat', sans-serif;
+$fuente-subtitulo: 'Open Sans', sans-serif;
+
+// Lista con los colores
+
+$colores: (
+    "background": $color-background,
+    "gris-claro": $color-gris-claro,
+    "negro-espeluznante": $color-negro-espeluznante,
+    "negro-noche": $color-negro-noche,
+    "negro-arnes": $color-negro-arnes,
+    "rojo-arnes": $color-rojo-arnes,
+    "gris-acorazado": $color-gris-acorazado,
+    "paltino": $color-paltino
+);

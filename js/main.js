@@ -7,12 +7,14 @@ $(document).ready(function() {
     $(this).removeClass('hover');
     });
 });
+
 /*Efectos para el login*/
 document.addEventListener("DOMContentLoaded", function() {
     var loginForm = document.querySelector(".login-form");
     loginForm.style.opacity = 1;
     loginForm.style.transform = "translateY(0)";
 });
+
 /*login blogs*/
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
