@@ -1,29 +1,13 @@
-/*Efectos para los menus*/
-$(document).ready(function() {
-    // Agrega la clase "hover" cuando se pasa el ratón por encima de los menús
-    $('.menu > li').hover(function() {
-    $(this).addClass('hover');
-    }, function() {
-    $(this).removeClass('hover');
+// Obtén todos los elementos con la clase "hover-animation"
+const blogCards = document.querySelectorAll('.hover-animation');
+
+// Recorre cada elemento y agrega los event listeners
+blogCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+    gsap.to(card, { y: -5, boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.3)', duration: 0.3 });
     });
-});
 
-/*Efectos para el login*/
-document.addEventListener("DOMContentLoaded", function() {
-    var loginForm = document.querySelector(".login-form");
-    loginForm.style.opacity = 1;
-    loginForm.style.transform = "translateY(0)";
-});
-
-/*login blogs*/
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
+    card.addEventListener('mouseleave', () => {
+    gsap.to(card, { y: 0, boxShadow: 'none', duration: 0.3 });
+    });
 });

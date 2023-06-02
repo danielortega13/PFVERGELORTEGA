@@ -5,7 +5,6 @@
 }
 
 @import '_variables.scss';
-/* aquí configuración de la fuente usada en el sitio web*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import '_mixins.scss';
 @import '_breadcrumb.scss';
@@ -14,84 +13,6 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-}
-
-// estilos header
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    padding: 0 20px;
-    background-color: $color-fondo;
-    
-    .header-left {
-        display: flex;
-        align-items: center;
-        
-        img {
-        height: 50px;
-        }
-    }
-    
-    .header-right {
-        display: flex;
-        align-items: center;
-    }
-    
-    .header-icons {
-        display: flex;
-        align-items: center;
-        margin-left: 20px;
-        
-        a {
-        margin-left: 20px;
-        color: $color-enlace;
-        font-size: 18px;
-        text-decoration: none;
-        
-        &:hover {
-            color: $color-enlace-hover;
-            cursor: pointer;
-        }
-        }
-    }
-}
-
-/* Estilos para pantallas de dispositivos móviles HEADER */
-@media screen and (max-width: 768px) {
-
-    /* Ajustar el tamaño del logo */
-    .header-left {
-    img {
-        height: 40px;
-    }
-    }
-
-    /* Ajustar la altura del HEADER */
-    header {
-        height: 60px;
-    }
-
-    /* Alinear los íconos a la derecha */
-    .header-icons {
-        margin-left: auto;
-    }
-
-    /* Ajustar el margen derecho del input del buscador */
-    .header-search input[type="text"] {
-        margin-right: 0;
-    }
-
-    /* Ajustar el tamaño de la fuente del input del buscador */
-    .header-search input[type="text"] {
-        font-size: 14px;
-    }
-
-    /* Ajustar el tamaño de los íconos */
-    .header-icons a {
-        font-size: 16px;
-    }
 }
 
 /* estilos del footer */
@@ -1021,8 +942,8 @@ p {
     margin-bottom: 50px;
 }
 
-/* Estilos para responsive misión y visión*/
 
+/* Estilos para responsive misión y visión*/
 @media screen and (max-width: 768px) {
     .mision-vision {
         padding: 60px;
@@ -1045,6 +966,7 @@ p {
         font-size: 16px;
     }
 }
+
 /* Estilos para la sección "about-us" */
 .about-us {
     padding: 20px;
@@ -1144,89 +1066,131 @@ p {
     to {opacity: 1;}
 }
 
-/* estilos nuestras tiendas */
+/* Estilos para nuestras tiendas */
 
 .nuestrastiendas {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-}
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
 
-.nuestrastiendas h1 {
-    font-size: 25px;
-}
+    .nuestrastiendas h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    }
 
-.nuestrastiendas p {
+    .nuestrastiendas p {
+    font-size: 18px;
+    color: #777;
+    line-height: 1.5;
     margin-bottom: 20px;
-}
+    }
 
-.nuestrastiendas-map {
-    margin-bottom: 20px;
-}
+    .nuestrastiendas-map {
+    margin-bottom: 40px;
+    }
 
-.store-grid {
+    .store-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-}
+    grid-gap: 30px;
+    }
 
-.store-card {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px
-}
+    .store-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    }
 
-a {
+    .store-card-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    }
+
+    .store-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+
+    .store-card p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 5px;
+    }
+
+    .store-card a {
+    color: #333;
     text-decoration: none;
-}
-.login-page {
+    transition: color 0.3s ease;
+    }
+
+    .store-card a:hover {
+    color: #555;
+    }
+
+    .login-page {
     width: 100%;
     height: 100vh;
-    display: inline-block;
     display: flex;
     align-items: center;
-}
-.form-right i {
-    font-size: 100px;
-}
-@media only screen and (max-width: 768px) {
-    .nuestrastiendas {
-    padding: 10px;
+    justify-content: center;
+    background-color: #f9f9f9;
     }
-    .nuestrastiendas h1 {
-    font-size: 20px;
-    }
-    .store-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px;
-    }
-    .store-card {
-    padding: 10px;
-    }
+
     .form-right i {
-    font-size: 60px;
+    font-size: 100px;
+    color: #555;
     }
-}
 
-.nuestrastiendas-map {
+    @media only screen and (max-width: 768px) {
+    .nuestrastiendas {
+        padding: 30px;
+    }
+    
+    .nuestrastiendas h1 {
+        font-size: 30px;
         margin-bottom: 20px;
+    }
+    
+    .store-grid {
+        grid-gap: 20px;
+    }
+    
+    .store-card {
+        padding: 20px;
+    }
+    
+    .store-card-img {
+        margin-bottom: 20px;
+    }
+    
+    .form-right i {
+        font-size: 80px;
+    }
+    
+    .nuestrastiendas-map iframe {
+        width: 100%;
+        height: 300px;
+    }
+    }
 
-        iframe {
-            width: 100%;
-            height: 400px;
-        }
+    @media only screen and (max-width: 480px) {
+    .nuestrastiendas p {
+        font-size: 16px;
+    }
+    }
 
-        @media only screen and (max-width: 768px) {
-            iframe {
-            height: 300px;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            iframe {
-            height: 200px;
-            }
-        }
-        }
 
 // estilos para privacidad y seguridad
 

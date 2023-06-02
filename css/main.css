@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-/* aquí configuración de la fuente usada en el sitio web*/
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -93,6 +92,11 @@
   }
 }
 
+.blog-card.hovered {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
 .blog-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -135,72 +139,16 @@
   background-color: #e12e31;
 }
 
+@media (max-width: 767px) {
+  .VIDEO {
+    width: 100%;
+    height: auto;
+  }
+}
 body {
   font-family: "Montserrat", sans-serif;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  padding: 0 20px;
-  background-color: #ffffff;
-}
-header .header-left {
-  display: flex;
-  align-items: center;
-}
-header .header-left img {
-  height: 50px;
-}
-header .header-right {
-  display: flex;
-  align-items: center;
-}
-header .header-icons {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-header .header-icons a {
-  margin-left: 20px;
-  color: #4a4a4a;
-  font-size: 18px;
-  text-decoration: none;
-}
-header .header-icons a:hover {
-  color: #e12e31;
-  cursor: pointer;
-}
-
-/* Estilos para pantallas de dispositivos móviles HEADER */
-@media screen and (max-width: 768px) {
-  /* Ajustar el tamaño del logo */
-  .header-left img {
-    height: 40px;
-  }
-  /* Ajustar la altura del HEADER */
-  header {
-    height: 60px;
-  }
-  /* Alinear los íconos a la derecha */
-  .header-icons {
-    margin-left: auto;
-  }
-  /* Ajustar el margen derecho del input del buscador */
-  .header-search input[type=text] {
-    margin-right: 0;
-  }
-  /* Ajustar el tamaño de la fuente del input del buscador */
-  .header-search input[type=text] {
-    font-size: 14px;
-  }
-  /* Ajustar el tamaño de los íconos */
-  .header-icons a {
-    font-size: 16px;
-  }
-}
 /* estilos del footer */
 .site-footer {
   background-color: #333;
@@ -1207,88 +1155,122 @@ p {
     opacity: 1;
   }
 }
-/* estilos nuestras tiendas */
+/* Estilos para nuestras tiendas */
 .nuestrastiendas {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nuestrastiendas h1 {
-  font-size: 25px;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 .nuestrastiendas p {
+  font-size: 18px;
+  color: #777;
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 
 .nuestrastiendas-map {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .store-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 30px;
 }
 
 .store-card {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
 }
 
-a {
+.store-card-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.store-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.store-card p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.store-card a {
+  color: #333;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.store-card a:hover {
+  color: #555;
 }
 
 .login-page {
   width: 100%;
   height: 100vh;
-  display: inline-block;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
 }
 
 .form-right i {
   font-size: 100px;
+  color: #555;
 }
 
 @media only screen and (max-width: 768px) {
   .nuestrastiendas {
-    padding: 10px;
+    padding: 30px;
   }
   .nuestrastiendas h1 {
-    font-size: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
   .store-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 20px;
   }
   .store-card {
-    padding: 10px;
+    padding: 20px;
+  }
+  .store-card-img {
+    margin-bottom: 20px;
   }
   .form-right i {
-    font-size: 60px;
+    font-size: 80px;
   }
-}
-.nuestrastiendas-map {
-  margin-bottom: 20px;
-}
-.nuestrastiendas-map iframe {
-  width: 100%;
-  height: 400px;
-}
-@media only screen and (max-width: 768px) {
   .nuestrastiendas-map iframe {
+    width: 100%;
     height: 300px;
   }
 }
 @media only screen and (max-width: 480px) {
-  .nuestrastiendas-map iframe {
-    height: 200px;
+  .nuestrastiendas p {
+    font-size: 16px;
   }
 }
-
 .privacidad-column h1 {
   font-size: 2em;
   font-weight: bold;
